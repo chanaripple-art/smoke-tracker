@@ -2347,7 +2347,10 @@ function boot() {
   }, 60000);
 
   if ('serviceWorker' in navigator && location.protocol !== 'file:') {
-    navigator.serviceWorker.register('sw.js').catch(function (e) {
+    /* updateViaCache:'none' 让浏览器每次都绕过 HTTP 缓存去检查 sw.js。
+       GitHub Pages 对 sw.js 发的是 max-age=600，不加这个的话你以后更新 App，
+       手机上最多要等 10 分钟才能拿到新版本。 */
+    navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' }).catch(function (e) {
       console.warn('Service Worker 注册失败（离线功能不可用）：', e);
     });
   }
