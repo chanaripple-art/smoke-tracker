@@ -1,0 +1,33 @@
+{
+  "name": "吸烟记录",
+  "short_name": "记录",
+  "description": "记录每天的吸烟情况，温和地减少。数据只保存在本机。",
+  "lang": "zh-CN",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F7F4EE",
+  "theme_color": "#F7F4EE",
+  "categories": ["health", "lifestyle"],
+  "icons": [
+    {
+      "src": "./icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "记录一根",
+      "short_name": "记录",
+      "url": "./index.html#record"
+    },
+    {
+      "name": "我现在想抽",
+      "short_name": "缓一缓",
+      "url": "./index.html#buffer"
+    }
+  ]
+}
